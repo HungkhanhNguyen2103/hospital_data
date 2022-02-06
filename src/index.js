@@ -33,4 +33,4 @@ route(app);
 
 // 127.0.0.1 - localhost ánh xạ
 
-app.listen(8888)
+app.listen(process.env.PORT || 8888)
