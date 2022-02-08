@@ -19,7 +19,7 @@ function route(app){
 
       app.use('/search', newsRouter)
 
-      app.use('/', newsRouter)
+      // app.use('/', newsRouter)
       
 }
 

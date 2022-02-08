@@ -10,7 +10,7 @@ class NewsController{
         // //        err : 'Error'
         // //    })
         //   });
-        res.render('home')
+        res.render('search')
     }
 
     //[POST] /search/create
