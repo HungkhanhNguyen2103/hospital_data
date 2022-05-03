@@ -1,5 +1,4 @@
 const express = require('express') //thư viện được cài
-const { engine } = require('express-handlebars')
 const path  = require('path')
 const app = express() //() toán tử call
 app.use(express.urlencoded({extended: true})); 
@@ -15,9 +14,7 @@ db.connect();
 
 app.use(cors())
 
-app.engine('handlebars',engine())
-app.set('view engine','handlebars')
-app.set('views',path.join(__dirname,'resources/views'))
+
 
 
 // //xu ly form

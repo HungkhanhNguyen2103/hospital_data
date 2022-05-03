@@ -1,23 +1,11 @@
-const newsRouter = require('./news')
+const dataRouter = require('./data')
+const hospitalRouter = require('./hospital')
 
 function route(app){
 
 
-    // app.get('/', (req, res) => { //arrow funcion
-    //     res.render('home')
-    //   })
-      
-
-    // app.get('/search', (req, res) => { //arrow funcion
-    //   res.render('search')
-    // })
-    
-    // app.post('/search/create',(req,res) => {
-    //   console.log(req);
-    //   res.send('abc')
-    // })
-
-      app.use('/search', newsRouter)
+      app.use('/data', dataRouter)
+      app.use('/yte', hospitalRouter)
 
       // app.use('/', newsRouter)
       
