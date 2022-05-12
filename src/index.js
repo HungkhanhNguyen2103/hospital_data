@@ -1,16 +1,21 @@
 const express = require('express') //thư viện được cài
-const path  = require('path')
+
+require('dotenv').config()
+
 const app = express() //() toán tử call
 app.use(express.urlencoded({extended: true})); 
 app.use(express.json());   
 
 const route = require('./routes')
 
-const db = require('./config/db')
+// const db = require('./config/db')
 const cors = require('cors')
 
+
+
+// console.log()
 //Connect to DB
-db.connect();
+// db.connect();
 
 app.use(cors())
 
@@ -30,4 +35,4 @@ route(app);
 
 // 127.0.0.1 - localhost ánh xạ
 
-app.listen(process.env.PORT || 8888)
+app.listen(process.env.PORT ||  8001)

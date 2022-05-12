@@ -1,11 +1,12 @@
-const dataRouter = require('./data')
-const hospitalRouter = require('./hospital')
+const sendEmail = require('./send_email')
+
 
 function route(app){
 
-
-      app.use('/data', dataRouter)
-      app.use('/yte', hospitalRouter)
+      // app.get('/' ,(req, res) => {
+      //   res.json('abc')
+      // })
+      app.use('/send_email', sendEmail)
 
       // app.use('/', newsRouter)
       
