@@ -25,7 +25,7 @@ class SendEmailController{
             from: process.env.AUTH_USER, // sender address
             to: req.body.email, // list of receivers
             subject: `Xác thực email người dùng`, // Subject line // plain text body
-            html: `<span><h1>Xin chào  ${result.data.username} !</h1> <p> Bạn cần truy cập đường link <a href=${process.env.API_CONFIRM + result.data.accessToken }>${'http://localhost:3000/success?jwt=' + result.data.accessToken}</a> để xác thực email</p></span>`, // html body
+            html: `<span><h1>Xin chào  ${result.data.username} !</h1> <p> Bạn cần truy cập đường link <a href=${process.env.API_CONFIRM + result.data.accessToken }>${process.env.API_CONFIRM + result.data.accessToken}</a> để xác thực email</p></span>`, // html body
             
           });
 
