@@ -10,8 +10,12 @@ const sendEmailController = require('../app/controllers/SendEmailController')
 // router.post('/create', dataController.createPosition)
 // router.delete('/delete/:id',newController.delete)
 // router.get('/:userId',newController.getUser)
-router.post('/scores',sendEmailController.sendEmailScore)
+router.get('/request_scores/:accessToken',sendEmailController.requestScore)
+router.get('/default_scores',sendEmailController.defaultScore)
+router.get('/scores/:accessToken',sendEmailController.emailScore)
+router.get('/update_scores/:accessToken',sendEmailController.checkUpdateScore)
 router.post('/',sendEmailController.sendEmail)
+
 
 
 
